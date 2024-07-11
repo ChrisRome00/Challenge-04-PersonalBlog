@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Blog</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/form.css">
+</head>
+<body>
+    <!-- Create light and dark mode -->
+    
+    <div class="main-container">
+        <h1>Self.log( )</h1>
+        <div class="form-container">
+            <form >
+                <h2>Whats goin' on?</h2>
+                <hr>
+                
+                <div class="inform">
+                    <label for="username">Username</label>
+                    <br />
+                    <input type="text" class="input-area" id="username" placeholder="Enter your username" max-length="15" required>
+                </div>
+
+                <div class="inform">
+                    <label for="title">Title</label>
+                    <br />
+                    <input type="text" class="input-area" id="title" placeholder="What is on your mind" max-length="30" required>
+                </div>
+
+                
+
+                <div class="inform">
+                    <label for="content">Content</label>
+                    <br />
+                    <textarea id="content" class="input-area textarea" placeholder="Today was..." rows="3" cols="30" max-length="1000" required></textarea>
+                </div>
+                <div class="button-container">
+                    <button class="button">Post</button>
+                </div>
+                
+
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
