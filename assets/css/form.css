@@ -1,5 +1,4 @@
 .main-container {
-    /* border: 5px solid black; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,7 +7,6 @@
     align-items: center;
     height: 100vh;
     background-color: bisque;
-    /*take off border when ready to start on light and dark mode*/
     
 }
 
@@ -16,7 +14,7 @@ h1 {
     margin: 20px;
     font-size: 100px;
     font-family: Arial, Helvetica, sans-serif;
-    /* adjust font size for smaller screens*/
+
 }
 
 .form-container {
@@ -44,7 +42,6 @@ hr {
 }
 
 .inform {
-    /* border: 2px solid red; */
     margin: 10px;
     padding: 10px;
 }
@@ -86,5 +83,9 @@ hr {
 @media (max-width: 700px) {
     h1{
         font-size: 50px;
+    }
+
+    h2{
+        font-size: smaller;
     }
 }
