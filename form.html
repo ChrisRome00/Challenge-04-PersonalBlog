@@ -1,47 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Blog</title>
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="stylesheet" href="./assets/css/form.css">
-</head>
-<body>
-    <!-- Create light and dark mode -->
-    
-    <div class="main-container">
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/form.css" />
+  </head>
+  <body>
+    <div class="container light">
+      <!-- Create light and dark mode -->
+      <input type="checkbox" id="darkmode-toggle" />
+      <label for="darkmode-toggle" class="switch"></label>
+      <div class="main-container">
         <h1>Self.log( )</h1>
         <div class="form-container">
-            <form id="fillout-form" action="./blog.html">
-                <h2>Whats goin' on?</h2>
-                <hr>
-                
-                <div class="inform">
-                    <label for="username">Username</label>
-                    <br />
-                    <input type="text" class="input-area" id="username" placeholder="Enter your username" required>
-                </div>
+          <form id="fillout-form" action="./blog.html">
+            <h2>Whats goin' on?</h2>
+            <hr />
 
-                <div class="inform">
-                    <label for="title">Title</label>
-                    <br />
-                    <input type="text" class="input-area" id="title" placeholder="What is on your mind" required>
-                </div>
+            <div class="inform">
+              <label for="username">Username</label>
+              <br />
+              <input
+                type="text"
+                class="input-area"
+                id="username"
+                placeholder="Enter your username"
+                required
+              />
+            </div>
 
-                <div class="inform">
-                    <label for="content">Content</label>
-                    <br />
-                    <textarea id="content" class="input-area textarea" placeholder="Today was..." rows="3" cols="30" required></textarea>
-                </div>
+            <div class="inform">
+              <label for="title">Title</label>
+              <br />
+              <input
+                type="text"
+                class="input-area"
+                id="title"
+                placeholder="What is on your mind"
+                required
+              />
+            </div>
 
-                <div class="button-container">
-                    <button type="submit" class="button" id="mybutton">Post</button>
-                </div>
-            </form>
+            <div class="inform">
+              <label for="content">Content</label>
+              <br />
+              <textarea
+                id="content"
+                class="input-area textarea"
+                placeholder="Today was..."
+                rows="3"
+                cols="30"
+                required
+              ></textarea>
+            </div>
+
+            <div class="button-container">
+              <button type="submit" class="button" id="mybutton">Post</button>
+            </div>
+          </form>
         </div>
+      </div>
     </div>
 
     <script src="./assets/js/form.js"></script>
-</body>
+  </body>
 </html>

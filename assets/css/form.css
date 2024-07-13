@@ -1,20 +1,122 @@
+:root{
+    --dark1: rgb(39, 54, 70); 
+    --dark2: rgb(64, 82, 113);
+    --darkFont1: rgb(235, 236, 239);
+    --darkFont2: rgb(210, 210, 212);
+
+    --light1: rgb(217, 212, 193);
+    --light2: rgb(236, 236, 225);
+    --lightFont1: black;
+    --lightFont2: grey;
+    
+}
+
 .main-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-height: 667px;
-    min-width: 378px;
     align-items: center;
     height: 100vh;
-    background-color: bisque;
+    /* background-color: bisque; */
     
+}
+
+.switch{
+    width: 100px;
+    height: 50px;
+    position: fixed;
+    top: -20px;
+    background-color: white;
+    border-radius: 200px;
+    cursor: pointer;
+    border: 2px solid grey;
+    left:50%;
+    right: 50%;
+    transform: translate(-50%, 50%);
+    transition: 0.4s;
+    margin-top: 3%;
+}
+
+.switch:after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 4px;
+    left: 7px;
+    background-color: white;
+    border-radius: 180px;
+    border: 1px solid black;
+    transition: 0.4s;
+}
+
+#darkmode-toggle {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+input:checked + label {
+    background-color: rgb(49, 48, 48);
+}
+
+input:checked + label:after {
+    left: 50px;
+    transform: translateX(10%);
+}
+
+/* Dark mode */
+.dark {
+    background-color: var(--dark1);
+    
+  }
+.dark .form-container{
+    background-color: var(--dark2);
+}
+.dark h1{
+    color: var(--darkFont1);
+}
+
+.dark h2, .dark label {
+    color: var(--darkFont2);
+}
+.dark .input-area{
+    background-color: black;
+    color: var(--darkFont1);
+}
+.dark .button {
+    color: var(--darkFont1);
+    background: var(--dark1);
+}
+
+/* Light mode */
+
+.light {
+    background-color: var(--light1);
+  }
+.light .form-container{
+    background-color: var(--light2);
+}
+.light h1{
+    color: var(--lightFont1);
+}
+
+.light h2, .light label {
+    color: var(--lightFont1);
+}
+.light .input-area{
+    background-color: white;
+    color: var(--lightFont1);
+}
+.light .button {
+    color: var(--lightFont1);
+    background: var(--light1);
 }
 
 h1 {
     margin: 20px;
     font-size: 100px;
-    font-family: Arial, Helvetica, sans-serif;
-
 }
 
 .form-container {
@@ -23,9 +125,9 @@ h1 {
     width: auto;
     min-width: 40vw;
     
-    border: 5px double rgb(14, 11, 11);
+    border: 5px double black;
     border-radius: 20px;
-    background: rgb(241, 231, 218);
+    /* background: rgb(241, 231, 218); */
 
     font-size: 30px;
     
@@ -71,13 +173,12 @@ hr {
 }
 
 .button{
-    background-color: rgb(0, 0, 0);
     border-radius: 10px;
     width: 90%;
     margin: 0 auto;
     height: 40px;
     font-size: 20px;
-    color:bisque;
+    /* color:bisque; */
 }
 
 @media (max-width: 700px) {
@@ -87,5 +188,12 @@ hr {
 
     h2{
         font-size: smaller;
+    }
+    
+}
+
+@media (max-height: 780px){
+    .main-container{
+        padding-top: 100px;
     }
 }

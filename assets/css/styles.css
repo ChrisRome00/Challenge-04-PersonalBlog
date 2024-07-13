@@ -1,11 +1,13 @@
 :root{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: bisque;
-    --bodycolor: rgb(241, 231, 218);
 }
 
 *{
     margin: 0;
     padding: 0;
     
+}
+
+html{
+    margin: 0;
 }

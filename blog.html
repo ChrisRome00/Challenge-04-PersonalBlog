@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Blog</title>
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="stylesheet" href="./assets/css/blog.css">
-</head>
-<body>
-    <nav>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/blog.css" />
+  </head>
+  <body>
+    <div class="container light">
+      <nav>
         <h1>Self.log( )</h1>
         <form action="./form.html">
-            <button id="back-button" class="goBack"> < Back </button>
+          <button id="back-button" class="goBack">< Back</button>
         </form>
-        
+        <input type="checkbox" id="darkmode-toggle" />
+        <label for="darkmode-toggle" class="switch"></label>
         <!-- Place light/dark button here -->
-    </nav>
+      </nav>
 
-    
-    <main id="allPosts" class="allPosts">
+      <main id="allPosts" class="allPosts">
+        <!-- This is where we store the posts -->
+      </main>
 
-    <!-- This is where we store the posts -->
-
-    </main>
-
-    <footer class="footer">
+      <footer class="footer">
         <div class="footer-container" id="contact">
-            <p>Contact Me</p>
-            <p>Phone: (123) 456 - 7890</p>
-            <p>Email: ChrisRome00@email.com</p>
-            <a href="https://github.com/ChrisRome00"><img src="./assets/icons/image.png" class="small-icon"></a>
+          <p>Contact Me</p>
+          <p>Phone: (123) 456 - 7890</p>
+          <p>Email: ChrisRome00@email.com</p>
+          <a href="https://github.com/ChrisRome00"
+            ><img src="./assets/icons/image.png" class="small-icon"
+          /></a>
         </div>
-    </footer>
+      </footer>
+    </div>
     <script src="./assets/js/blog.js"></script>
-</body>
+  </body>
 </html>

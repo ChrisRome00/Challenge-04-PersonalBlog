@@ -1,7 +1,18 @@
+:root{
+    --dark1: rgb(39, 54, 70); 
+    --dark2: rgb(64, 82, 113);
+    --darkFont1: rgb(235, 236, 239);
+    --darkFont2: rgb(210, 210, 212);
+
+    --light1: rgb(217, 212, 193);
+    --light2: rgb(236, 236, 225);
+    --lightFont1: black;
+    --lightFont2: grey;
+}
 
 nav {
-    background-color: burlywood;
-    height: auto;
+    /* background-color: burlywood; */
+    height: 80px;
     position: fixed;
     width: 100%;
     z-index: 1;
@@ -20,7 +31,7 @@ h1 {
 }
 
 form{
-    background-color: burlywood;
+    /* background-color: burlywood; */
     
     
     border-radius: 5px;
@@ -31,22 +42,127 @@ form{
     
     
 }
+
+.switch{
+    width: 100px;
+    height: 50px;
+    position: relative;
+    display: block;
+    background-color: white;
+    border-radius: 200px;
+    cursor: pointer;
+    border: 2px solid grey;
+    bottom: 40px;
+    left: 50%;
+    transition: 0.4s;
+}
+
+.switch:after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 4px;
+    left: 7px;
+    background-color: white;
+    border-radius: 180px;
+    border: 1px solid black;
+    transition: 0.4s;
+}
+
+#darkmode-toggle {
+    width: 0;
+    height: 0;
+    display: none;
+}
+input:checked + label {
+    background-color: rgb(49, 48, 48);
+}
+
+input:checked + label:after {
+    left: 50px;
+    transform: translateX(10%);
+}
+
+input:checked + label {
+    background-color: rgb(49, 48, 48);
+}
+
+/* Dark mode */
+.dark {
+    background-color: var(--dark1);
+    height: 100vh;
+}
+.dark nav{
+    background-color: var(--dark2);
+}
+.dark h1{
+    color: var(--darkFont2);
+}
+.dark .goBack {
+    background-color: var(--dark1);
+    color: var(--darkFont2);
+}
+.dark .allPosts{
+    background-color: var(--dark1);
+    color: var(--darkFont1);
+}
+.light .username {
+    color: var(--lightFont2);
+}
+.dark .post-container{
+    border: 4px solid grey;   
+}
+.dark .footer-container{
+    background-color: var(--dark2);
+    color: white;
+}
+
+/* Light mode */
+.light {
+    background-color: var(--light1);
+    height: 100vh;
+}
+.light nav{
+    background-color: var(--light1);
+}
+.light h1{
+    color: var(--lightFont1);
+}
+.light .goBack {
+    background-color: var(--light2);
+    color: var(--lightFont1);
+}
+.light .allPosts{
+    background-color: var(--light2);
+    color: var(--lightFont1);
+}
+.light .username {
+    color: var(--lightFont2);
+}
+.light .post-container{
+    border: 4px solid black;   
+}
+.light .footer-container{
+    background-color: var(--light1);
+}
+
 .goBack{
     border: 2px solid black;
-    color:black;
+    /* color:black; */
     width: 100%;
     height: 100%;
-    background-color: bisque;
+    /* background-color: bisque; */
     border-radius: 5px;
 }
 
 main {
-    padding-top: 80px; 
-    height: auto;
+    padding-top: 90px; 
+    padding-bottom: 90px;
 }
 
 .footer-container {
-    background-color: burlywood;
+    /* background-color: burlywood; */
     width: 100%;
     border-top: 2px solid black;
     height: auto;
@@ -64,10 +180,7 @@ main {
     border-radius: 20px;
 }
 
-.footer-container > p {
-    color: black;
 
-}
 
 .allPosts {
     width: 100%;
@@ -75,12 +188,12 @@ main {
     flex-direction: column;
     align-items: center;
     margin-bottom: 90px;
-    height: auto;
+    
+    min-height: auto;
     
 }
 
 .post-container {
-    border: 4px solid black;
     width: 95%;
     margin-top: 20px;
     height: auto;
@@ -96,7 +209,7 @@ main {
 hr {
     width: 95%;
     margin: 0 auto;
-    border: 1px solid black;
+    border: 1px solid grey;
 }
 
 .textarea {
@@ -108,12 +221,15 @@ hr {
 
 .username {
     margin-left: 50px;
-    color: grey;
+    
 }
+
+
 
 @media (max-width: 800px) {
     h1 {
         font-size: 30px;
+        top: 25px;
     }
     .footer-container{
         display: block;
@@ -131,6 +247,12 @@ hr {
     
     .allPosts {
         margin-bottom: 150px;
+    }
+    .switch {
+        bottom: 17px;
+    }
+    main{
+        padding-bottom: 200px;
     }
 }
 
